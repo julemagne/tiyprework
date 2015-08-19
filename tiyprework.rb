@@ -36,14 +36,14 @@
         end
       end
 
-      questions
+
 
       def pricing
         $price=($hours.to_i*$labor.to_i) + $cost.to_i
         puts "The value of your project is estimated to be $#{$price}."
       end
 
-      pricing
+
 
       def save
         print "Would you like to name and save your project? Type yes or no"
@@ -57,8 +57,11 @@
         end
       end
 
-      save
 
+
+      questions
+      pricing
+      save
       saved = {}
       saved[$name] = $price
       saved.each {|name, price| puts "#{name} is valued at $#{price}."}
